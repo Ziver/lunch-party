@@ -1,5 +1,14 @@
 <script setup>
+import { ref } from 'vue';
 
+const groupName = ref('');
+const userName = ref('');
+
+function doLogin() {
+  console.log(
+    'We are logging in: Group=' + groupName.value + ', User=' + userName.value
+  );
+}
 </script>
 
 <template>
@@ -8,14 +17,14 @@
 
   <div>
     <label for="group">Group Name: </label>
-    <input type="text" id="group" name="group" required />
+    <input type="text" id="group" name="group" v-model="groupName" required />
   </div>
   <div>
     <label for="name">Your User Name: </label>
-    <input type="text" id="name" name="name" required />
+    <input type="text" id="name" name="name" v-model="userName" required />
   </div>
   <div>
-    <button type="button" @click="">Login</button>
+    <button type="button" @click="doLogin">Login</button>
   </div>
 </template>
 
