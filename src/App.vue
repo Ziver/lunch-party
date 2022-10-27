@@ -12,7 +12,11 @@ function loginDone(data) {
 </script>
 
 <template>
-  <LoginPage v-show="showLogin" @response="loginDone" />
+  <div>
+    <h1>Lunch Party!!</h1>
+
+    <LoginPage v-show="showLogin" @response="loginDone" />
+  </div>
 </template>
 
 <style scoped></style>

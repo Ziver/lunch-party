@@ -17,7 +17,6 @@ function doLogin() {
 
 <template>
   <div>
-    <h1>Lunch Party!!</h1>
     <h3>Login Page</h3>
 
     <div>

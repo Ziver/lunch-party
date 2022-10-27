@@ -1,8 +1,9 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
+  <div>
+    <h3>Start Voting!</h3>
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
