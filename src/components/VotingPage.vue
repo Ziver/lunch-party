@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import RestaurantComponent from './RestaurantComponent.vue';
 
 var restaurantList = ref([
   {
@@ -36,7 +37,7 @@ function addRestaurant() {
 
     <div>
       <div v-for="restaurant in restaurantList">
-        {{ restaurant.name }} {{ restaurant.url }}
+        <RestaurantComponent :name="restaurant.name" :url="restaurant.url" />
       </div>
     </div>
   </div>
