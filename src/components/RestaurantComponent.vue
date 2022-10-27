@@ -5,10 +5,18 @@ const props = defineProps({
   name: String,
   url: String,
 });
+
+const votes = ref(0);
 </script>
 
 <template>
-  <div class="restaurant-box">{{ name }} {{ url }}</div>
+  <div class="restaurant-box">
+    {{ name }}
+    <button type="button" @click="votes++">{{ votes }}</button>
+    <p>
+      {{ url }}
+    </p>
+  </div>
 </template>
 
 <style scoped>
