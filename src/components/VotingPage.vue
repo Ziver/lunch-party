@@ -2,6 +2,10 @@
 import { ref } from 'vue';
 import RestaurantComponent from './RestaurantComponent.vue';
 
+function getUsername() {
+  return 'aa'; //;$store.state.user.name;
+}
+
 var restaurantList = ref([
   {
     name: 'Tele2 Kista',
@@ -32,7 +36,7 @@ function addRestaurant() {
 
 <template>
   <div>
-    <h3>Start Voting!</h3>
+    <h3>Start Voting! ({{ getUsername() }})</h3>
     <button type="button" @click="addRestaurant">+</button>
 
     <div>

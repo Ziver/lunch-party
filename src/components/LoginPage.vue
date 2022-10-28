@@ -24,7 +24,7 @@ function doLogin() {
       <input type="text" id="group" name="group" v-model="groupName" required />
     </div>
     <div>
-      <label for="name">Your User Name: </label>
+      <label for="name">Your Name: </label>
       <input type="text" id="name" name="name" v-model="userName" required />
     </div>
     <div>

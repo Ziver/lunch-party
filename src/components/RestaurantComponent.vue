@@ -11,11 +11,8 @@ const votes = ref(0);
 
 <template>
   <div class="restaurant-box">
-    {{ name }}
+    <a :href="url" target="_blank">{{ name }}</a>
     <button type="button" @click="votes++">{{ votes }}</button>
-    <p>
-      {{ url }}
-    </p>
   </div>
 </template>
 
@@ -29,5 +26,8 @@ const votes = ref(0);
   border: 2px solid gray;
   margin: 5px;
   overflow: hidden;
+}
+.restaurant-box button{
+  float: right;
 }
 </style>
