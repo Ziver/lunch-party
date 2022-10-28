@@ -1,10 +1,9 @@
 <script setup>
 import { ref } from 'vue';
+import { localStore } from '../store/local.js';
 import RestaurantComponent from './RestaurantComponent.vue';
 
-function getUsername() {
-  return 'aa'; //;$store.state.user.name;
-}
+const store = localStore();
 
 var restaurantList = ref([
   {
@@ -36,7 +35,7 @@ function addRestaurant() {
 
 <template>
   <div>
-    <h3>Start Voting! ({{ getUsername() }})</h3>
+    <h3>Start Voting! ({{ store.user.name }})</h3>
     <button type="button" @click="addRestaurant">+</button>
 
     <div>

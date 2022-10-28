@@ -9,9 +9,5 @@ export const localStore = defineStore('local', {
       },
     };
   },
-  actions: {
-    increment() {
-      this.count++;
-    },
-  },
+  actions: {},
 });

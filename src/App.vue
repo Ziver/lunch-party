@@ -4,15 +4,18 @@ import { localStore } from './store/local.js';
 import LoginPage from './components/LoginPage.vue';
 import VotingPage from './components/VotingPage.vue';
 
+const store = localStore();
+
 const showLogin = ref(true);
 const showVoting = ref(false);
 
 function loginDone(data) {
   console.log('Main app login done.');
 
-  //this.$store.state.user.group = data.group;
-  //this.$store.state.user.name = data.name;
-  console.log(this.$store);
+  console.log(data);
+  store.user.group = data.groupName;
+  store.user.name = data.userName;
+
   showLogin.value = false;
   showVoting.value = true;
 }
