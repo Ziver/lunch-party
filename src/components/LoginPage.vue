@@ -17,19 +17,41 @@ function doLogin() {
 
 <template>
   <div>
-    <h3>Login Page</h3>
+    <form>
+      <h3 class="h3 mb-3 fw-normal">Please sign in</h3>
 
-    <div>
-      <label for="group">Group Name: </label>
-      <input type="text" id="group" name="group" v-model="groupName" required />
-    </div>
-    <div>
-      <label for="name">Your Name: </label>
-      <input type="text" id="name" name="name" v-model="userName" required />
-    </div>
-    <div>
-      <button type="button" @click="doLogin">Login</button>
-    </div>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="groupName"
+          placeholder="Group Name"
+          v-model="groupName"
+          required
+        />
+        <label for="floatingInput">Group Name</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="userName"
+          placeholder="Your"
+          v-model="userName"
+          required
+        />
+        <label for="floatingPassword">Your Name</label>
+      </div>
+
+      <br />
+      <button
+        class="w-100 btn btn-lg btn-primary"
+        type="button"
+        @click="doLogin"
+      >
+        Sign in
+      </button>
+    </form>
   </div>
 </template>
 

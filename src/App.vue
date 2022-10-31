@@ -22,12 +22,18 @@ function loginDone(data) {
 </script>
 
 <template>
-  <div>
+  <main class="form-signin w-100 m-auto">
     <h1>Lunch Party!!</h1>
 
     <LoginPage v-show="showLogin" @response="loginDone" />
     <VotingPage v-show="showVoting" />
-  </div>
+  </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.form-signin {
+  max-width: 430px;
+  padding: 15px;
+}
+
+</style>
