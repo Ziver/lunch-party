@@ -17,6 +17,7 @@ function doVote(direction) {
       upVotes.value--;
       hasUpVoted = false;
     } else {
+      if (hasDownVoted === true) doVote('down'); // toggle down vote
       upVotes.value++;
       hasUpVoted = true;
     }
@@ -25,6 +26,7 @@ function doVote(direction) {
       downVotes.value--;
       hasDownVoted = false;
     } else {
+      if (hasUpVoted === true) doVote('up'); // toggle up vote
       downVotes.value++;
       hasDownVoted = true;
     }
@@ -34,24 +36,8 @@ function doVote(direction) {
 
 <template>
   <div class="card">
-    <div class="row">
-      <div class="col-md-4 d-none d-md-block">
-        <svg
-          class="bd-placeholder-img img-fluid rounded-start"
-          width="100%"
-          height="250"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: Image"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#868e96"></rect>
-          <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text>
-        </svg>
-      </div>
-      <div class="col-md-8">
+    <div class="row g-0">
+      <div class="col-md-12">
         <h5
           class="card-header d-flex justify-content-between align-items-center"
         >
@@ -88,4 +74,8 @@ function doVote(direction) {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.card {
+  margin-top: 1em;
+}
+</style>
