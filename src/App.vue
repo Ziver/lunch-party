@@ -22,7 +22,7 @@ function loginDone(data) {
 </script>
 
 <template>
-  <main class="form-signin w-100 m-auto">
+  <main class="w-100 m-auto">
     <h1>Lunch Party!!</h1>
 
     <LoginPage v-show="showLogin" @response="loginDone" />
@@ -31,9 +31,8 @@ function loginDone(data) {
 </template>
 
 <style scoped>
-.form-signin {
+main {
   max-width: 430px;
   padding: 15px;
 }
-
 </style>

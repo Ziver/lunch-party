@@ -35,8 +35,22 @@ function addRestaurant() {
 
 <template>
   <div>
-    <h3>Start Voting! ({{ store.user.name }})</h3>
-    <button type="button" @click="addRestaurant">+</button>
+    <div class="row">
+      <div class="col-sm-8">
+        <h3 class="fw-normal text-primary">
+          Start Voting! ({{ store.user.name }})
+        </h3>
+      </div>
+      <div class="col-sm-4">
+        <button
+          type="button"
+          class="btn btn-sm btn-primary"
+          @click="addRestaurant"
+        >
+          +
+        </button>
+      </div>
+    </div>
 
     <div>
       <div v-for="restaurant in restaurantList">

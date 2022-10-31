@@ -18,7 +18,7 @@ function doLogin() {
 <template>
   <div>
     <form>
-      <h3 class="h3 mb-3 fw-normal">Please sign in</h3>
+      <h3 class="h3 mb-3 fw-normal text-danger">Please sign in</h3>
 
       <div class="form-floating">
         <input
