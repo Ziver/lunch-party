@@ -47,7 +47,7 @@ function addRestaurant() {
           class="btn btn-sm btn-primary"
           @click="addRestaurant"
         >
-          +
+          Add Restaurant
         </button>
       </div>
     </div>
